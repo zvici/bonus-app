@@ -1,20 +1,48 @@
-# new-project
+# CubeRun
 
-## Build Setup
+## Features
+- Api
 
-```bash
-# install dependencies
-$ yarn install
+## Tech
+CubeRun uses a number of open source projects to work properly:
+| Name | Document |
+| ------ | ------ |
+| Nodejs | https://nodejs.org/en/docs |
+| Docker | https://docs.docker.com |
+| Express | https://expressjs.com/ |
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## Installation and Development
+CubeRun requires [Node.js](https://nodejs.org/) v16+ to run.
+Install the dependencies and devDependencies and start the server.
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+Node server: 
+```sh
+cd node-server
+npm i
+npm run start:dev
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Service registry: 
+```sh
+cd service-registry
+npm i
+npm run start
+```
+User service: 
+```sh
+cd user-registry
+npm i
+npm run start
+```
+
+Connect API in host http://localhost:3080/
+Following API from file https://cube-vn.backlog.com/file/GROUP3_TRAINING/04.CubeRun/03.Layout/API%20CubeRun.xlsx
+## Docker
+Run postgres container using for database:
+```sh
+docker compose up
+```
+Postgres info in file docker-compose.yml
+Create database and table following from file https://cube-vn.backlog.com/file/GROUP3_TRAINING/04.CubeRun/03.Layout/CUBERUN.xlsx
+## License
+MIT
